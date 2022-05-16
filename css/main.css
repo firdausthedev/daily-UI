@@ -23,26 +23,33 @@
 }
 .top {
   position: relative;
-  height: 400px;
-  width: 400px;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(to bottom, rgba(231, 77, 92, 1) 0%, rgba(243, 119, 77, 1) 100%);
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 .top img {
   position: absolute;
   height: 50px;
   left: 0;
   animation: cloud 20s linear infinite;
+  z-index: 0;
 }
 .top h1 {
   font-family: "Sanchez", serif;
   font-size: 2rem;
   color: white;
   z-index: 10;
+}
+
+.top p {
+  font-family: "Sanchez", serif;
+  font-size: 1.3rem;
+  color: white;
 }
 .sun-container {
   position: absolute;
@@ -110,10 +117,10 @@
 
 @keyframes cloud {
   from {
-    left: 0;
+    left: -50px;
   }
   to {
-    left: 400px;
+    left: 100%;
   }
 }
 @keyframes glow-1 {
