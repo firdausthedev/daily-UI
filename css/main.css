@@ -32,12 +32,22 @@
   align-items: center;
   flex-direction: column;
 }
-.top img {
+.top .cloud {
   position: absolute;
   height: 50px;
   left: 0;
-  animation: cloud 20s linear infinite;
   z-index: 0;
+}
+
+.top .cloud-1 {
+  animation: cloud 20s linear infinite;
+}
+
+.top .cloud-2 {
+  left: -100px;
+  margin-top: -6rem;
+  animation: cloud 20s linear infinite;
+  animation-delay: 10s;
 }
 .top h1 {
   font-family: "Sanchez", serif;
@@ -117,7 +127,7 @@
 
 @keyframes cloud {
   from {
-    left: -50px;
+    left: -10%;
   }
   to {
     left: 100%;
@@ -152,5 +162,50 @@
   to {
     height: 460px;
     width: 460px;
+  }
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20vh;
+  min-height: 200px;
+  max-height: 250px;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .waves {
+    height: 80px;
+    min-height: 80px;
   }
 }
