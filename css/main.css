@@ -413,3 +413,32 @@ body::-webkit-scrollbar {
 .spotify .player .album-container .like-container .screen-share g {
   fill: rgb(179, 179, 179);
 }
+
+.spotify .player .audio-container {
+  display: flex;
+  align-items: center;
+}
+
+.spotify .player .audio-container .audio-line {
+  width: 93px;
+  height: 4px;
+  border-radius: 1rem;
+  background-color: rgb(179, 179, 179);
+  overflow: hidden;
+}
+.spotify .player .audio-container .audio-line .active-line {
+  background-color: white;
+  width: 70%;
+  height: 100%;
+}
+
+.spotify .player .audio-container .connect,
+.spotify .player .audio-container .connect-2,
+.spotify .player .audio-container .lyric {
+  fill: rgb(179, 179, 179);
+  margin-right: 1rem;
+}
+.spotify .player .audio-container .speaker {
+  margin-right: 0.5rem;
+  fill: rgb(179, 179, 179);
+}
