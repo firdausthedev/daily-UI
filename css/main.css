@@ -346,6 +346,7 @@ body::-webkit-scrollbar {
   color: white;
   font-size: 14px;
   font-family: spotifyBold, sans-serif;
+  padding-top: 3px;
 }
 
 .spotify .content .content-1 .profile .profile-container {
