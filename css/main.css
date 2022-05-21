@@ -442,3 +442,80 @@ body::-webkit-scrollbar {
   margin-right: 0.5rem;
   fill: rgb(179, 179, 179);
 }
+.spotify .player .control-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.spotify .player .control-container .controls-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.spotify .player .control-container .controls-buttons .repeat {
+  fill: rgb(179, 179, 179);
+}
+.spotify .player .control-container .controls-buttons .back-button {
+  fill: rgb(179, 179, 179);
+  margin-left: 1.5rem;
+}
+
+.spotify .player .control-container .controls-buttons .play-container {
+  background-color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spotify .player .control-container .controls-buttons .play-container .play {
+  fill: rgb(24, 24, 24);
+}
+
+.spotify .player .control-container .controls-buttons .forward-button {
+  fill: rgb(179, 179, 179);
+}
+
+.spotify .player .control-container .controls-buttons .loop {
+  fill: rgba(255, 255, 255, 0.3);
+  margin-left: 1.5rem;
+}
+
+.spotify .player .control-container .song-time-container {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spotify .player .control-container .song-time-container p {
+  color: rgb(179, 179, 179);
+  font-size: 11px;
+  font-family: spotify, sans-serif;
+  letter-spacing: normal;
+  margin-top: 4px;
+}
+.spotify .player .control-container .song-time-container .audio-line {
+  width: 30vw;
+  height: 4px;
+  border-radius: 1rem;
+  margin: 0 0.7rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+.spotify
+  .player
+  .control-container
+  .song-time-container
+  .audio-line
+  .active-line {
+  background-color: white;
+  width: 30%;
+  height: 100%;
+}
