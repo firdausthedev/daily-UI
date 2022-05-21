@@ -1,9 +1,19 @@
-@import url("https://fonts.googleapis.com/css?family=Sanchez");
+@import url('https://fonts.googleapis.com/css?family=Sanchez');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: spotify;
+  src: url('../font/spotify/CircularSpotifyText-Book.otf');
+}
+
+@font-face {
+  font-family: spotifyLight;
+  src: url('../font/spotify/CircularSpotifyText-Light.otf');
 }
 
 :root {
@@ -39,7 +49,11 @@ body::-webkit-scrollbar {
   position: relative;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(231, 77, 92, 1) 0%, rgba(243, 119, 77, 1) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(231, 77, 92, 1) 0%,
+    rgba(243, 119, 77, 1) 100%
+  );
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -64,14 +78,14 @@ body::-webkit-scrollbar {
   animation-delay: 10s;
 }
 .top h1 {
-  font-family: "Sanchez", serif;
+  font-family: 'Sanchez', serif;
   font-size: 2rem;
   color: white;
   z-index: 10;
 }
 
 .top p {
-  font-family: "Sanchez", serif;
+  font-family: 'Sanchez', serif;
   font-size: 1.3rem;
   color: white;
 }
@@ -231,7 +245,13 @@ body::-webkit-scrollbar {
   width: 240px;
   height: 240px;
   border-radius: 50%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fefefe), to(#fffbe8));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#fefefe),
+    to(#fffbe8)
+  );
   background: -webkit-linear-gradient(#fefefe, #fffbe8);
   background: -o-linear-gradient(#fefefe, #fffbe8);
   background: linear-gradient(#fefefe, #fffbe8);
@@ -288,7 +308,10 @@ body::-webkit-scrollbar {
   padding: 1rem 2rem 0 2rem;
   height: 19rem;
   background-color: rgb(80, 40, 240);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6) 0px, rgb(18, 18, 18) 100%);
+  background-image: linear-gradient(
+    rgba(0, 0, 0, 0.6) 0px,
+    rgb(18, 18, 18) 100%
+  );
 }
 
 .spotify .content .content-1 .nav-container {
@@ -316,19 +339,77 @@ body::-webkit-scrollbar {
   fill: white;
 }
 
-.spotify .content .content-1 .nav-container .controls-container .control.left-control svg {
+.spotify
+  .content
+  .content-1
+  .nav-container
+  .controls-container
+  .control.left-control
+  svg {
   margin-right: 0.1rem;
 }
 
-.spotify .content .content-1 .nav-container .controls-container .control.right-control {
+.spotify
+  .content
+  .content-1
+  .nav-container
+  .controls-container
+  .control.right-control {
   margin-left: 0.6rem;
 }
 
 .spotify .player {
   background: rgb(24, 24, 24);
-  height: 5rem;
   width: 100%;
   position: absolute;
   bottom: 0;
   z-index: 99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 1rem;
+}
+.spotify .player .album-container {
+  display: flex;
+}
+.spotify .player .album-container img {
+  width: 56px;
+  height: 56px;
+}
+.spotify .player .album-container .song-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 0.9rem;
+}
+
+.spotify .player .album-container .song-title p:first-child {
+  color: white;
+  font-size: 14px;
+  letter-spacing: normal;
+  line-height: 1rem;
+  font-family: spotify, sans-serif;
+}
+
+.spotify .player .album-container .song-title p:last-child {
+  color: rgb(179, 179, 179);
+  font-size: 11px;
+  font-family: spotify, sans-serif;
+  letter-spacing: normal;
+  line-height: 1rem;
+}
+.spotify .player .album-container .like-container {
+  display: flex;
+  align-items: center;
+  margin-left: 1.7rem;
+}
+
+.spotify .player .album-container .like-container .spotify-like {
+  fill: rgb(179, 179, 179);
+}
+.spotify .player .album-container .like-container .screen-share {
+  margin-left: 1rem;
+}
+.spotify .player .album-container .like-container .screen-share g {
+  fill: rgb(179, 179, 179);
 }
