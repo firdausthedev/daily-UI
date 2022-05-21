@@ -16,6 +16,11 @@
   src: url('../font/spotify/CircularSpotifyText-Light.otf');
 }
 
+@font-face {
+  font-family: spotifyBold;
+  src: url('../font/spotify/CircularSpotifyText-Bold.otf');
+}
+
 :root {
   --primary: red;
   --secondary: blue;
@@ -320,6 +325,76 @@ body::-webkit-scrollbar {
   justify-content: space-between;
   align-items: center;
 }
+
+.spotify .content .content-1 .profile {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.spotify .content .content-1 .profile .profile-upgrade {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border: 0.1px solid white;
+  border-radius: 2rem;
+  margin-right: 1.5rem;
+  padding: 0.3rem 1rem;
+}
+
+.spotify .content .content-1 .profile .profile-upgrade p {
+  color: white;
+  font-size: 14px;
+  font-family: spotifyBold, sans-serif;
+}
+
+.spotify .content .content-1 .profile .profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+  padding: 5px;
+  background: #000;
+  gap: 0.5rem;
+}
+
+.spotify .content .content-1 .profile .profile-container > p {
+  color: white;
+  font-size: 13.333px;
+  font-family: spotifyBold, sans-serif;
+  margin-top: 5px;
+}
+
+.spotify .content .content-1 .profile .profile-container .profile-dropdown {
+  fill: white;
+  margin-right: 6px;
+}
+
+.spotify
+  .content
+  .content-1
+  .profile
+  .profile-container
+  .profile-img-container {
+  background-color: #535353;
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spotify
+  .content
+  .content-1
+  .profile
+  .profile-container
+  .profile-img-container
+  .user-profile {
+  fill: white;
+}
+
 .spotify .content .content-1 .nav-container .controls-container {
   display: flex;
   align-items: center;
