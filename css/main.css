@@ -407,7 +407,7 @@ body::-webkit-scrollbar {
 }
 
 .review-1 {
-  height: 110vh;
+  padding: 4rem;
   overflow: hidden;
   background: #8cc0de;
   display: flex;
@@ -625,7 +625,7 @@ body::-webkit-scrollbar {
 }
 
 .payment-1 {
-  height: 100vh;
+  padding: 4rem;
   overflow: hidden;
   background: #4d4c7d;
   display: flex;
@@ -795,7 +795,7 @@ body::-webkit-scrollbar {
 }
 
 .sign-up-1 {
-  height: 100vh;
+  padding: 4rem;
   overflow: hidden;
   background: #e9d5ca;
   display: flex;
