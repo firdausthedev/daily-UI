@@ -310,13 +310,76 @@ body::-webkit-scrollbar {
 }
 
 .spotify .content .content-1 {
-  padding: 1rem 2rem 0 2rem;
-  height: 19rem;
+  padding: 1rem 2rem 2rem 2rem;
   background-color: rgb(80, 40, 240);
   background-image: linear-gradient(
     rgba(0, 0, 0, 0.6) 0px,
     rgb(18, 18, 18) 100%
   );
+}
+
+.spotify .content .content-2 {
+  padding: 1rem 2rem 4rem 2rem;
+  height: 300px;
+  overflow: hidden;
+}
+
+.spotify .content .content-2.mt {
+  margin-top: 2.4rem;
+}
+
+.spotify .content .content-2 .header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.spotify .content .content-2 .header-container h3 {
+  font-family: spotify, sans-serif;
+  font-weight: 700;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+}
+
+.spotify .content .content-2 .header-container p {
+  font-family: spotify, sans-serif;
+  color: rgb(179, 179, 179);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.spotify .content .content-2 .recent-shows {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0 20px;
+}
+
+.spotify .content .content-2 .recent-shows .album {
+  border-radius: 7px;
+  background-color: rgb(24, 24, 24);
+  height: 240px;
+}
+
+.spotify .content .content-1 h2 {
+  font-family: spotify, sans-serif;
+  color: rgb(255, 255, 255);
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 2.2rem;
+}
+
+.spotify .content .content-1 .recent-albums {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px 20px;
+}
+
+.spotify .content .content-1 .recent-albums .recent-album {
+  height: 80px;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .spotify .content .content-1 .nav-container {
