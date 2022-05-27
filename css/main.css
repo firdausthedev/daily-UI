@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Sanchez');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
 
 * {
   margin: 0;
@@ -657,4 +659,222 @@ body::-webkit-scrollbar {
   background-color: white;
   width: 30%;
   height: 100%;
+}
+
+.review-1 {
+  height: 110vh;
+  overflow: hidden;
+  background: #8cc0de;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-1 .container {
+  position: relative;
+  height: 700px;
+  width: 600px;
+  margin-top: 4rem;
+}
+
+.review-1 .container .bg-form {
+  background: #fff;
+  height: 700px;
+  width: 600px;
+  border-radius: 23px;
+  position: absolute;
+  top: -4rem;
+  left: -4rem;
+}
+
+.review-1 .container .main-form {
+  background: #f8f8f8;
+  height: 700px;
+  width: 600px;
+  border-radius: 23px;
+  position: absolute;
+  box-shadow: 0px 12px 92px rgba(25, 27, 74, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 60px;
+}
+
+.review-1 .container .main-form .review-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.review-1 .container .main-form .review-header h2 {
+  font-family: 'Merriweather';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 29px;
+  line-height: 38px;
+  width: 233px;
+  margin-top: 10px;
+}
+
+.review-1 .container .main-form .review-header .header-container {
+  background: #ffffff;
+  border: 3px solid #ffffff;
+  box-shadow: 0px 7px 20px rgba(115, 116, 156, 0.08);
+  border-radius: 15px;
+  padding: 18px;
+}
+
+.review-1
+  .container
+  .main-form
+  .review-header
+  .header-container
+  .rating-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.review-1
+  .container
+  .main-form
+  .review-header
+  .header-container
+  .rating-header
+  h3 {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  color: #191b4a;
+  margin-top: 3px;
+}
+
+.review-1 .container .main-form .review-header .header-container p {
+  text-align: center;
+  margin-top: 7px;
+  width: 120px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: center;
+
+  color: #191b4a;
+}
+
+.review-1 .container .main-form .search-bar {
+  padding: 15px 20px;
+  width: 100%;
+  border-radius: 23px;
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  outline: none;
+  border: none;
+  background: url(../img/review-1/search.svg) no-repeat scroll 20px 15px;
+  padding-left: 60px;
+  background-color: #fff;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  color: #73749c;
+}
+
+.review-1 .container .main-form .review-title {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 2.7rem;
+}
+.review-1 .container .main-form .stars-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 0.7rem;
+  gap: 5px;
+}
+
+.review-1 .container .main-form .stars-container .star {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color: #191b4a;
+  margin-top: 2px;
+  width: 15px;
+}
+.review-1 .container .main-form .stars-container svg {
+  width: 23px;
+  height: 23px;
+}
+
+.review-1 .container .main-form .stars-container .star-line {
+  width: 100%;
+  height: 10px;
+  background: #eeeeee;
+  border: 1px solid #c9c9c9;
+  border-radius: 13px;
+  overflow: hidden;
+}
+
+.review-1 .container .main-form .stars-container .star-line .star-active {
+  background: #ffd66c;
+  border-radius: 13px;
+  height: 10px;
+}
+
+.review-1
+  .container
+  .main-form
+  .stars-container:nth-child(4)
+  .star-line
+  .star-active {
+  width: 70%;
+}
+.review-1
+  .container
+  .main-form
+  .stars-container:nth-child(5)
+  .star-line
+  .star-active {
+  width: 40%;
+}
+.review-1 .container .main-form .stars-container .star-line .star-active {
+  width: 0%;
+}
+
+.review-1 .container .main-form .stars-container .star-total {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  width: 40px;
+
+  color: #191b4a;
+}
+
+.review-1 .container .main-form .review-btn {
+  padding: 13px 20px;
+  background: #191b4a;
+  border-radius: 30px;
+  margin-top: 2.2rem;
+  cursor: pointer;
+}
+
+.review-1 .container .main-form .review-btn p {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 24px;
+
+  color: #ffffff;
 }
