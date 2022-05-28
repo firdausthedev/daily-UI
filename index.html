@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Random css</title>
+    <title>Daily UI</title>
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -416,68 +416,50 @@
         </div>
       </div>
     </section>
-    <section class="main">
-      <div class="top">
-        <div class="rect"></div>
-        <img src="img/cloud.svg" alt="cloud" class="cloud cloud-1" />
-        <img src="img/cloud.svg" alt="cloud" class="cloud cloud-2" />
-        <h1>Greetings</h1>
-        <p>It is <span class="time"></span></p>
-        <div class="sun-container">
-          <div class="sun">
-            <div class="sun-glow-1"></div>
-            <div class="sun-glow-2"></div>
-            <div class="sun-glow-3"></div>
-          </div>
-        </div>
-        <!-- <div class="moon-container">
-          <div class="moon">
-            <div class="crater-1"></div>
-            <div class="crater-2"></div>
-          </div>
-        </div> -->
 
-        <div>
-          <svg
-            class="waves"
-            xmlns="http://www.w3.org/2000/svg"
-            xmlns:xlink="http://www.w3.org/1999/xlink"
-            viewBox="0 24 150 28"
-            preserveAspectRatio="none"
-            shape-rendering="auto"
-          >
-            <defs>
-              <path
-                id="gentle-wave"
-                d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"
-              />
-            </defs>
-            <g class="parallax">
-              <use
-                xlink:href="#gentle-wave"
-                x="48"
-                y="0"
-                fill="rgba(255,255,255,0.7"
-              />
-              <use
-                xlink:href="#gentle-wave"
-                x="48"
-                y="3"
-                fill="rgba(255,255,255,0.5)"
-              />
-              <use
-                xlink:href="#gentle-wave"
-                x="48"
-                y="5"
-                fill="rgba(255,255,255,0.3)"
-              />
-              <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-            </g>
-          </svg>
+    <section class="payment-1">
+      <div class="container">
+        <div class="col">
+          <img src="img/payment-1/beer.svg" alt="beer image" />
+        </div>
+        <div class="col">
+          <p>4/4</p>
+          <h2>Last Step!</h2>
+          <p>Enter your payment info below.</p>
+          <div class="cards">
+            <div class="card">
+              <img src="img/payment-1/card.svg" alt="card image" />
+              <p>Credit Card</p>
+              <img src="img/payment-1/check.svg" alt="checked image" />
+            </div>
+            <div class="card">
+              <img src="img/payment-1/paypal.png" alt="paypal image" />
+              <div></div>
+            </div>
+          </div>
+          <h3>Card Number</h3>
+          <input type="text" placeholder="123 4567 8912 3456" />
+
+          <div>
+            <div>
+              <h3>Expiration Date</h3>
+              <div>
+                <input type="text" placeholder="Month" />
+                <input type="text" placeholder="Day" />
+              </div>
+            </div>
+            <div>
+              <h3>CVC</h3>
+              <input type="text" placeholder="123" />
+            </div>
+          </div>
+          <p>
+            By creating an account, you agree to Study.com’s Terms of Use and
+            Privacy Policy.
+          </p>
+          <a href="#">Join Now</a>
         </div>
       </div>
     </section>
-
-    <script src="js/main.js"></script>
   </body>
 </html>

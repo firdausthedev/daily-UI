@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Sanchez');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
 
 * {
   margin: 0;
@@ -23,18 +24,6 @@
   src: url('../font/spotify/CircularSpotifyText-Bold.otf');
 }
 
-:root {
-  --primary: red;
-  --secondary: blue;
-  --grey: #e4e4e4;
-  --light-blue: #e6f5ff;
-  --yellow: 255, 176, 88;
-  --moon: #eacd97;
-  --moon-new: #382c58;
-  --sky: #3a2e5d;
-  --crater: #f0e4d0;
-}
-
 body {
   overflow-y: scroll;
   scrollbar-width: none; /* Firefox */
@@ -44,251 +33,6 @@ body::-webkit-scrollbar {
   /* WebKit */
   width: 0;
   height: 0;
-}
-
-.main {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.top {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(231, 77, 92, 1) 0%,
-    rgba(243, 119, 77, 1) 100%
-  );
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.top .cloud {
-  position: absolute;
-  height: 50px;
-  left: 0;
-  z-index: 0;
-}
-
-.top .cloud-1 {
-  animation: cloud 20s linear infinite;
-}
-
-.top .cloud-2 {
-  left: -100px;
-  margin-top: -6rem;
-  animation: cloud 20s linear infinite;
-  animation-delay: 10s;
-}
-.top h1 {
-  font-family: 'Sanchez', serif;
-  font-size: 2rem;
-  color: white;
-  z-index: 10;
-}
-
-.top p {
-  font-family: 'Sanchez', serif;
-  font-size: 1.3rem;
-  color: white;
-}
-.sun-container {
-  position: absolute;
-  top: -200px;
-  right: -200px;
-  height: 460px;
-  width: 460px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.sun {
-  z-index: 1;
-  width: 220px;
-  height: 220px;
-  background-color: rgba(var(--yellow), 1);
-  border-radius: 50%;
-  position: relative;
-}
-
-.sun-glow-1 {
-  position: absolute;
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
-  z-index: 2;
-  background-color: rgba(var(--yellow), 0.3);
-  top: 50%;
-  bottom: 0;
-  right: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: glow-1 4s linear infinite;
-}
-
-.sun-glow-2 {
-  position: absolute;
-  height: 0px;
-  width: 0px;
-  border-radius: 50%;
-  z-index: 2;
-  background-color: rgba(var(--yellow), 0.2);
-  top: 50%;
-  bottom: 0;
-  right: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: glow-2 4s linear infinite;
-}
-
-.sun-glow-3 {
-  position: absolute;
-  height: 0px;
-  width: 0px;
-  border-radius: 50%;
-  z-index: 2;
-  background-color: rgba(var(--yellow), 0.1);
-  top: 50%;
-  bottom: 0;
-  right: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: glow-3 4s linear infinite;
-}
-
-@keyframes cloud {
-  from {
-    left: -10%;
-  }
-  to {
-    left: 100%;
-  }
-}
-@keyframes glow-1 {
-  from {
-    height: 250px;
-    width: 250px;
-  }
-  to {
-    height: 300px;
-    width: 300px;
-  }
-}
-
-@keyframes glow-2 {
-  from {
-    height: 250px;
-    width: 250px;
-  }
-  to {
-    height: 380px;
-    width: 380px;
-  }
-}
-@keyframes glow-3 {
-  from {
-    height: 250px;
-    width: 250px;
-  }
-  to {
-    height: 460px;
-    width: 460px;
-  }
-}
-
-.waves {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 20vh;
-  min-height: 200px;
-  max-height: 250px;
-}
-
-.parallax > use {
-  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
-}
-.parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-.parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-.parallax > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-.parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-@keyframes move-forever {
-  0% {
-    transform: translate3d(-90px, 0, 0);
-  }
-  100% {
-    transform: translate3d(85px, 0, 0);
-  }
-}
-
-@media (max-width: 768px) {
-  .waves {
-    height: 80px;
-    min-height: 80px;
-  }
-}
-
-.moon-container {
-  position: absolute;
-  top: -60px;
-  left: -60px;
-  width: 240px;
-  height: 240px;
-  border-radius: 50%;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(#fefefe),
-    to(#fffbe8)
-  );
-  background: -webkit-linear-gradient(#fefefe, #fffbe8);
-  background: -o-linear-gradient(#fefefe, #fffbe8);
-  background: linear-gradient(#fefefe, #fffbe8);
-  opacity: 1;
-}
-.moon {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-
-.crater-1 {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background: var(--crater);
-  bottom: 50px;
-  right: 50px;
-}
-
-.crater-2 {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: var(--crater);
-  bottom: 75px;
-  right: 75px;
 }
 
 /* spotify */
@@ -877,4 +621,174 @@ body::-webkit-scrollbar {
   line-height: 24px;
 
   color: #ffffff;
+}
+
+.payment-1 {
+  height: 100vh;
+  overflow: hidden;
+  background: #4d4c7d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+.payment-1 .container {
+  display: flex;
+  width: 70%;
+  padding: 5rem;
+  background-color: #f2f5fc;
+  box-shadow: 0px 8px 43px rgba(127, 156, 230, 0.2);
+}
+.payment-1 .container .col:first-child {
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+  padding-right: 2rem;
+}
+.payment-1 .container .col:first-child img {
+  width: 60%;
+  height: fit-content;
+}
+
+.payment-1 .container .col:last-child {
+  width: 60%;
+  padding-left: 1rem;
+}
+
+.payment-1 .container .col:last-child p:nth-child(1) {
+  font-weight: 400;
+  font-size: 20px;
+  color: #84a5c6;
+}
+
+.payment-1 .container .col:last-child h2 {
+  font-size: 32px;
+  font-weight: 600;
+  color: #064b8d;
+}
+
+.payment-1 .container .col:last-child h2 + p {
+  font-weight: 400;
+  font-size: 20px;
+  color: #064b8d;
+}
+
+.payment-1 .container .col:last-child .cards {
+  display: flex;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem 1.6rem;
+}
+
+.payment-1 .container .col:last-child .cards .card {
+  background: white;
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #63bafb;
+  border-radius: 5px;
+}
+.payment-1 .container .col:last-child .cards .card:first-child {
+  box-shadow: 0px 5px 15px #ccd7f8;
+}
+
+.payment-1 .container .col:last-child .cards .card p {
+  font-weight: 400;
+  font-size: 18px;
+  color: #064b8d;
+}
+
+.payment-1 .container .col:last-child .cards .card:last-child {
+  background-color: #fcfdff;
+  border: 1px solid #dce3ea;
+}
+
+.payment-1 .container .col:last-child .cards .card:last-child img:first-child {
+  width: 100px;
+}
+
+.payment-1 .container .col:last-child .cards .card:last-child div {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #dce3ea;
+}
+
+.payment-1 .container .col:last-child h3 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #064b8d;
+}
+
+.payment-1 .container .col:last-child .cards + h3 {
+  margin-top: 2rem;
+}
+.payment-1 .container .col:last-child input {
+  width: 100%;
+  background: #ffffff;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  margin-top: 0.4rem;
+  border: 1px solid #dce3ea;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #064b8d;
+}
+.payment-1 .container .col:last-child input::placeholder {
+  color: #a1aab2;
+  opacity: 0.7;
+}
+
+.payment-1 .container .col:last-child input + div {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1rem;
+}
+.payment-1 .container .col:last-child input + div div {
+  flex: 1;
+}
+
+.payment-1 .container .col:last-child input + div div:first-child div {
+  display: flex;
+}
+.payment-1
+  .container
+  .col:last-child
+  input
+  + div
+  div:first-child
+  div
+  input:first-child {
+  margin-right: 10px;
+}
+.payment-1 .container .col:last-child input + div > div:last-child input {
+  width: 40%;
+}
+
+.payment-1 .container .col:last-child input + div + p {
+  margin-top: 1rem;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  color: #064b8d;
+}
+.payment-1 .container .col:last-child a {
+  background: #064b8d;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  width: 50%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
