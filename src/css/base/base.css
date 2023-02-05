@@ -7,7 +7,6 @@
 .nav-floater {
   z-index: 99;
   position: fixed;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,18 +17,37 @@
   transform-origin: right bottom;
   transition: all 0.35s cubic-bezier(0.91, -0.28, 0.06, 1.3),
     background-color 0.25s ease, color 0.25s ease;
-  animation: tilt-shaking 0.7s 2.4s;
   bottom: 0px;
   top: 0px;
   margin: auto 0;
 }
 
 .next-floater {
-  right: 0px;
+  right: -100px;
+  animation: comeInRight 0.7s 2.4s forwards;
 }
 
 .prev-floater {
-  left: 0px;
+  left: -100px;
+  animation: comeInLeft 0.7s 2.4s forwards;
+}
+
+@keyframes comeInRight {
+  0% {
+    right: -100px;
+  }
+  100% {
+    right: 0px;
+  }
+}
+
+@keyframes comeInLeft {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 0px;
+  }
 }
 
 @keyframes tilt-shaking {
@@ -52,9 +70,6 @@
 
 .nav-floater:hover {
   background-color: hsl(0, 0%, 30%);
-}
-
-.nav-floater:hover {
   color: hsl(0, 0%, 80%);
 }
 
@@ -71,7 +86,6 @@
   overflow: hidden;
   z-index: 100;
   background-color: rgb(167, 110, 231);
-  /* background-color: rgb(167, 110, 231); */
 }
 .swipe-1 {
   position: fixed;

@@ -12,7 +12,7 @@
     "deploy": "gh-pages -d dist"
   },
   "keywords": [],
-  "author": "",
+  "author": "firdausthedev",
   "license": "ISC",
   "devDependencies": {
     "parcel": "^2.8.3"
