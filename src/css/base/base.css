@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav-floater {
+  z-index: 99;
+  position: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  width: 30px;
+  height: 50px;
+  cursor: pointer;
+  transform-origin: right bottom;
+  transition: all 0.35s cubic-bezier(0.91, -0.28, 0.06, 1.3),
+    background-color 0.25s ease, color 0.25s ease;
+  animation: tilt-shaking 0.7s 2.4s;
+  bottom: 0px;
+  top: 0px;
+  margin: auto 0;
+}
+
+.next-floater {
+  right: 0px;
+}
+
+.prev-floater {
+  left: 0px;
+}
+
+@keyframes tilt-shaking {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(7px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  75% {
+    transform: translateY(7px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.nav-floater:hover {
+  background-color: hsl(0, 0%, 30%);
+}
+
+.nav-floater:hover {
+  color: hsl(0, 0%, 80%);
+}
+
+.nav-floater span {
+  font-size: 1.4rem;
+  margin-top: -3px;
+}
+
+.swipe-load {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 100;
+  background-color: rgb(167, 110, 231);
+  /* background-color: rgb(167, 110, 231); */
+}
+.swipe-1 {
+  position: fixed;
+  background: rgb(255, 139, 93);
+  z-index: 101;
+  height: 100%;
+  animation: slideInLeft 0.7s forwards;
+}
+.swipe-2 {
+  background: rgb(86, 124, 228);
+  z-index: 102;
+  position: fixed;
+  height: 100%;
+  animation: slideInLeft 1.8s forwards;
+}
+.swipe-3 {
+  background: rgb(167, 110, 231);
+  z-index: 103;
+  height: 100%;
+  position: fixed;
+  animation: slideInLeft 2.4s forwards;
+}
+
+@keyframes slideInLeft {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}

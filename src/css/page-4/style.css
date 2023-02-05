@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;800&display=swap");
+
+.sign-up-1 {
+  padding: 4rem;
+  overflow: hidden;
+  background: #e9d5ca;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Mulish", sans-serif;
+}
+
+.sign-up-1 > .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px 104px;
+  gap: 20px;
+  background: #ffffff;
+  box-shadow: 0px 44px 84px -60px rgba(113, 19, 160, 0.09);
+  border-radius: 24px;
+}
+
+.sign-up-1 .container .user-profile {
+  width: 10rem;
+  height: 10rem;
+  border: 10px solid #f8f4fa;
+  border-radius: 50%;
+}
+.sign-up-1 .container h5 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #1c2852;
+}
+.sign-up-1 .container h4 {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #1c2852;
+}
+
+.sign-up-1 .container h4 + p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: #1c2852;
+  padding: 16px;
+  background: #f8f4fa;
+  border-radius: 8px;
+}
+
+.sign-up-1 .container .form {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+
+.sign-up-1 .container .form label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #1c2852;
+}
+
+.sign-up-1 .container .form input {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  padding: 24px;
+  color: #1c2852;
+  background: #ffffff;
+  border: 1px solid #c2adc2;
+  border-radius: 8px;
+  outline: none;
+  font-family: "Mulish", sans-serif;
+}
+
+.sign-up-1 .container .tnc {
+  margin: 1rem 0;
+  display: flex;
+  gap: 14px;
+}
+.sign-up-1 .container .tnc .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.sign-up-1 .container .tnc .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 33px;
+  width: 33px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.sign-up-1 .container .tnc .container .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 33px;
+  width: 33px;
+  background: #ffffff;
+  border: 1px solid #c2adc2;
+  border-radius: 8px;
+}
+
+.sign-up-1 .container .tnc .container:hover input ~ .checkmark {
+  background-color: #c2adc2;
+}
+
+.sign-up-1 .container .tnc .container input:checked ~ .checkmark {
+  background-color: #c2adc2;
+}
+
+.sign-up-1 .container .tnc .container .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.sign-up-1 .container .tnc .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.sign-up-1 .container .tnc .container .checkmark:after {
+  left: 11px;
+  top: 5px;
+  width: 6px;
+  height: 14px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.sign-up-1 .container .tnc p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  color: #1c2852;
+  width: 349px;
+}
+
+.sign-up-1 .container .tnc p span {
+  text-decoration-line: underline;
+  color: #a30062;
+}
+
+.sign-up-1 .container .tnc + div {
+  background: red;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: #a30062;
+  border: 1px solid #c2adc2;
+  border-radius: 8px;
+}
+
+.sign-up-1 .container .tnc + div a {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sign-up-1 .container .tnc + div + a {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #a30062;
+  margin-top: 1.6rem;
+}
