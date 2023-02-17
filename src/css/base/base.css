@@ -80,8 +80,10 @@
 
 .swipe-load {
   position: fixed;
-  display: flex;
+  display: block;
   width: 100%;
+  left: 0;
+  top: 0;
   height: 100%;
   overflow: hidden;
   z-index: 100;
