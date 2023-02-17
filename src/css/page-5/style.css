@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .shadow-1 {
+    box-shadow: 0px 76px 27px rgba(6, 27, 82, 0.1);
+  }
+
+  h1 {
+    font-family: "Merriweather";
+  }
+  body {
+    font-family: "Poppins";
+    color: #0e0e38;
+  }
+
+  .nav-floater span {
+    margin-top: 0;
+  }
+}
