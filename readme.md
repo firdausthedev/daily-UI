@@ -1,6 +1,6 @@
 # Daily UI
 
-This repo contains live demos of various free UI designs
+This repo contains live demos of various free UI designs and sometimes javascript challenges..
 
 | #   | Reference                                                                                          | Live Demo                                                 | Info                                              | Figma              | XD                 | CSS Library |
 | --- | -------------------------------------------------------------------------------------------------- | --------------------------------------------------------- | ------------------------------------------------- | ------------------ | ------------------ | ----------- |
