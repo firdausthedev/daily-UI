@@ -1,4 +1,6 @@
 const quote = document.querySelector("h2")! as HTMLHeadingElement;
+const quoteID = document.querySelector("p")! as HTMLParagraphElement;
+
 const diceBtn = document.querySelector("button")! as HTMLButtonElement;
 
 interface Slip {
@@ -20,6 +22,7 @@ const setQuote = () => {
   fetchQuote()
     .then(data => {
       quote.textContent = `"${data.slip.advice}"`;
+      quoteID.textContent = `ADVICE #${data.slip.id}`;
     })
     .catch(err => {
       quote.textContent = "Oops.. Something went wrong";
@@ -28,11 +31,13 @@ const setQuote = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   quote.textContent = "loading...";
+  quoteID.textContent = "";
   setQuote();
 });
 
 diceBtn.addEventListener("click", () => {
   quote.textContent = "loading...";
+  quoteID.textContent = "";
   setTimeout(() => {
     setQuote();
   }, 2000);
