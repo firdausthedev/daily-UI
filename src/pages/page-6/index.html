@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily UI</title>
+    <link
+      rel="shortcut icon"
+      href="../../img/page-6/favicon-32x32.png"
+      type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;800&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/base/base.css" />
+    <link rel="stylesheet" href="../../css/page-6/style.css" />
+  </head>
+  <body>
+    <div class="swipe-load">
+      <div class="swipe-1"></div>
+      <div class="swipe-2"></div>
+      <div class="swipe-3"></div>
+    </div>
+
+    <main class="h-screen flex items-center content-center bg-dark-blue p-4">
+      <section
+        class="w-full md:w-[32rem] mx-auto bg-dark-grayish-blue rounded-lg p-8 flex flex-col gap-6 relative pb-14">
+        <p
+          class="text-center text-neon-green font-sans text-sm tracking-[0.2rem] uppercase">
+          Advice #117
+        </p>
+        <h2
+          class="text-center text-white/80 font-sans text-[1.8rem] font-medium"></h2>
+        <svg
+          width="444"
+          height="16"
+          xmlns="http://www.w3.org/2000/svg"
+          class="mx-auto hidden md:block">
+          <g fill="none" fill-rule="evenodd">
+            <path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z" />
+            <g transform="translate(212)" fill="#CEE3E9">
+              <rect width="6" height="16" rx="3" />
+              <rect x="14" width="6" height="16" rx="3" />
+            </g>
+          </g>
+        </svg>
+
+        <svg
+          width="295"
+          height="16"
+          xmlns="http://www.w3.org/2000/svg"
+          class="mx-auto block md:hidden">
+          <g fill="none" fill-rule="evenodd">
+            <path fill="#4F5D74" d="M0 8h122v1H0zM173 8h122v1H173z" />
+            <g transform="translate(138)" fill="#CEE3E9">
+              <rect width="6" height="16" rx="3" />
+              <rect x="14" width="6" height="16" rx="3" />
+            </g>
+          </g>
+        </svg>
+        <button
+          class="random bg-neon-green absolute bottom-0 right-0 left-0 mx-auto w-fit p-5 rounded-full -mb-8 cursor-pointer hover:btn-shadow transition-shadow duration-300">
+          <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M20 0H4a4.005 4.005 0 0 0-4 4v16a4.005 4.005 0 0 0 4 4h16a4.005 4.005 0 0 0 4-4V4a4.005 4.005 0 0 0-4-4ZM7.5 18a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm4.5 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm0-9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Z"
+              fill="#202733" />
+          </svg>
+        </button>
+      </section>
+      <div>
+        <div
+          class="nav-floater prev-floater"
+          onclick="window.location.href ='../page-5'">
+          <span>&#10094;</span>
+        </div>
+      </div>
+    </main>
+
+    <script src="../../js/base/page-loader.js"></script>
+    <script src="../../js/page-6/app.ts" type="module"></script>
+  </body>
+</html>
