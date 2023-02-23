@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily UI</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../img/page-7/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="../../css/page-7/style.css" />
+  </head>
+  <body class="bg-magnolia font-sans">
+    <main>
+      <section
+        class="bg-white w-[950px] h-[650px] mx-auto my-[150px] rounded-lg flex p-4 shadow-md">
+        <div
+          class="form-nav w-[300px] bg-no-repeat bg-cover bg-[url('../../img/page-7/bg-sidebar-desktop.svg')] rounded-lg p-10 flex flex-col gap-6">
+          <div class="flex gap-4 justify-start items-center">
+            <p
+              class="text-md font-bold text-white flex items-center justify-center w-10 h-10 rounded-full border-white border-2 active-form">
+              1
+            </p>
+            <div>
+              <p class="text-base text-light-gray/80 uppercase font-light">
+                Step 1
+              </p>
+              <h2 class="text-md tracking-wide text-white font-bold uppercase">
+                Your Info
+              </h2>
+            </div>
+          </div>
+          <div class="flex gap-4 justify-start items-center">
+            <p
+              class="text-md font-bold text-white flex items-center justify-center w-10 h-10 rounded-full border-white border-2">
+              2
+            </p>
+            <div>
+              <p class="text-base text-light-gray/80 uppercase font-light">
+                Step 2
+              </p>
+              <h2 class="text-md tracking-wide text-white font-bold uppercase">
+                Select Plan
+              </h2>
+            </div>
+          </div>
+          <div class="flex gap-4 justify-start items-center">
+            <p
+              class="text-md font-bold text-white flex items-center justify-center w-10 h-10 rounded-full border-white border-2">
+              3
+            </p>
+            <div>
+              <p class="text-base text-light-gray/80 uppercase font-light">
+                Step 3
+              </p>
+              <h2 class="text-md tracking-wide text-white font-bold uppercase">
+                Add-Ons
+              </h2>
+            </div>
+          </div>
+          <div class="flex gap-4 justify-start items-center">
+            <p
+              class="text-md font-bold text-white flex items-center justify-center w-10 h-10 rounded-full border-white border-2">
+              4
+            </p>
+            <div>
+              <p class="text-base text-light-gray/80 uppercase font-light">
+                Step 4
+              </p>
+              <h2 class="text-md tracking-wide text-white font-bold uppercase">
+                Summary
+              </h2>
+            </div>
+          </div>
+        </div>
+        <form class="form-container flex flex-1 pt-14 px-20">
+          <div class="form-1 flex flex-col justify-between flex-1 hidden">
+            <div>
+              <h2 class="text-marine-blue text-3xl font-bold">Personal Info</h2>
+              <p class="text-base text-marine-blue/50 mt-2 font-normal">
+                Please provide your name, email address, and phone number.
+              </p>
+
+              <div class="flex flex-col gap-3 mt-8">
+                <div>
+                  <div class="flex justify-between">
+                    <label
+                      class="block text-marine-blue text-base font-medium mb-1"
+                      for="name"
+                      id="name-label">
+                      Name
+                    </label>
+                    <p
+                      class="helper-name text-red-500 inline text-base font-medium"></p>
+                  </div>
+
+                  <input
+                    class="appearance-none border border-gray-300 rounded-md w-full p-3 text-gray-600 leading-tight focus:outline-purplish-blue font-medium font-sans"
+                    id="name"
+                    type="text"
+                    placeholder="e.g. Stephen King" />
+                </div>
+                <div>
+                  <div class="flex justify-between">
+                    <label
+                      class="block text-marine-blue text-base font-medium mb-1"
+                      for="email"
+                      id="email-label">
+                      Email
+                    </label>
+                    <p
+                      class="helper-email text-red-500 inline text-base font-medium"></p>
+                  </div>
+
+                  <input
+                    class="appearance-none border border-gray-300 rounded-md w-full p-3 text-gray-600 leading-tight focus:outline-purplish-blue font-medium font-sans"
+                    id="email"
+                    type="email"
+                    placeholder="e.g. stephenking@lorem.com" />
+                </div>
+                <div>
+                  <div class="flex justify-between">
+                    <label
+                      class="text-marine-blue text-base font-medium mb-1"
+                      for="phone"
+                      id="phone-label">
+                      Phone Number
+                    </label>
+                    <p
+                      class="helper-phone text-red-500 inline text-base font-medium"></p>
+                  </div>
+
+                  <input
+                    class="appearance-none border border-gray-300 rounded-md w-full p-3 text-gray-600 leading-tight focus:outline-purplish-blue font-medium font-sans"
+                    id="phone"
+                    type="tel"
+                    placeholder="e.g. +1 234 567 890" />
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-end mb-4">
+              <button
+                class="py-3 bg-marine-blue hover:bg-marine-blue/80 transition duration-100 rounded-lg font-sans font-medium text-white"
+                aria-label="Aria Next Step">
+                Next Step
+              </button>
+            </div>
+          </div>
+
+          <div class="form-2 flex flex-col justify-between flex-1 hidden">
+            <div>
+              <h2 class="text-marine-blue text-3xl font-bold">
+                Select your plan
+              </h2>
+              <p class="text-base text-marine-blue/50 mt-2 font-normal">
+                You have the option of monthly or yearly billing
+              </p>
+
+              <div class="flex flex-col mt-8">
+                <ul class="grid grid-cols-3 gap-x-3">
+                  <li>
+                    <input
+                      type="radio"
+                      id="radio-arcade"
+                      name="price-plan"
+                      value="price-arcade"
+                      class="hidden peer"
+                      checked />
+
+                    <label
+                      for="radio-arcade"
+                      class="border border-gray-300 p-4 rounded-xl h-[10rem] flex peer-checked:border-purplish-blue peer-checked:bg-magnolia">
+                      <div class="flex flex-col justify-between">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 40 40">
+                          <g fill="none" fill-rule="evenodd">
+                            <circle cx="20" cy="20" r="20" fill="#FFAF7E" />
+                            <path
+                              fill="#FFF"
+                              fill-rule="nonzero"
+                              d="M24.995 18.005h-3.998v5.998h-2v-5.998H15a1 1 0 0 0-1 1V29a1 1 0 0 0 1 1h9.995a1 1 0 0 0 1-1v-9.995a1 1 0 0 0-1-1Zm-5.997 8.996h-2v-1.999h2v2Zm2-11.175a2.999 2.999 0 1 0-2 0v2.18h2v-2.18Z" />
+                          </g>
+                        </svg>
+
+                        <div>
+                          <p
+                            class="text-marine-blue font-sans font-medium text-base">
+                            Arcade
+                          </p>
+                          <p class="text-gray-400 font-sans text-sm">$9/mo</p>
+                          <p class="text-marine-blue font-sans text-xs"></p>
+                        </div>
+                      </div>
+                    </label>
+                  </li>
+
+                  <li>
+                    <input
+                      type="radio"
+                      id="radio-advanced"
+                      name="price-plan"
+                      value="price-advanced"
+                      class="hidden peer" />
+
+                    <label
+                      for="radio-advanced"
+                      class="border border-gray-300 p-4 rounded-xl h-[10rem] flex peer-checked:border-purplish-blue peer-checked:bg-magnolia">
+                      <div class="flex flex-col justify-between">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 40 40">
+                          <g fill="none" fill-rule="evenodd">
+                            <circle cx="20" cy="20" r="20" fill="#F9818E" />
+                            <path
+                              fill="#FFF"
+                              fill-rule="nonzero"
+                              d="M25.057 15H14.944C12.212 15 10 17.03 10 19.885c0 2.857 2.212 4.936 4.944 4.936h10.113c2.733 0 4.943-2.08 4.943-4.936S27.79 15 25.057 15ZM17.5 20.388c0 .12-.108.237-.234.237h-1.552v1.569c0 .126-.138.217-.259.217H14.5c-.118 0-.213-.086-.213-.203v-1.583h-1.569c-.126 0-.217-.139-.217-.26v-.956c0-.117.086-.213.202-.213h1.584v-1.554c0-.125.082-.231.203-.231h.989c.12 0 .236.108.236.234v1.551h1.555c.125 0 .231.083.231.204v.988Zm5.347.393a.862.862 0 0 1-.869-.855c0-.472.39-.856.869-.856.481 0 .87.384.87.856 0 .471-.389.855-.87.855Zm1.9 1.866a.86.86 0 0 1-.87-.852.86.86 0 0 1 .87-.855c.48 0 .87.38.87.855a.86.86 0 0 1-.87.852Zm0-3.736a.862.862 0 0 1-.87-.854c0-.472.39-.856.87-.856s.87.384.87.856a.862.862 0 0 1-.87.854Zm1.899 1.87a.862.862 0 0 1-.868-.855c0-.472.389-.856.868-.856s.868.384.868.856a.862.862 0 0 1-.868.855Z" />
+                          </g>
+                        </svg>
+
+                        <div>
+                          <p
+                            class="text-marine-blue font-sans font-medium text-base">
+                            Advanced
+                          </p>
+                          <p class="text-gray-400 font-sans text-sm">$12/mo</p>
+                          <p class="text-marine-blue font-sans text-xs"></p>
+                        </div>
+                      </div>
+                    </label>
+                  </li>
+
+                  <li>
+                    <input
+                      type="radio"
+                      id="radio-pro"
+                      name="price-plan"
+                      value="price-pro"
+                      class="hidden peer" />
+
+                    <label
+                      for="radio-pro"
+                      class="border border-gray-300 p-4 rounded-xl h-[10rem] flex peer-checked:border-purplish-blue peer-checked:bg-magnolia">
+                      <div class="flex flex-col justify-between">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="40"
+                          height="40"
+                          viewBox="0 0 40 40">
+                          <g fill="none" fill-rule="evenodd">
+                            <circle cx="20" cy="20" r="20" fill="#483EFF" />
+                            <path
+                              fill="#FFF"
+                              fill-rule="nonzero"
+                              d="M26.666 13H13.334A3.333 3.333 0 0 0 10 16.333v7.193a3.447 3.447 0 0 0 2.14 3.24c1.238.5 2.656.182 3.56-.8L18.52 23h2.96l2.82 2.966a3.2 3.2 0 0 0 3.56.8 3.447 3.447 0 0 0 2.14-3.24v-7.193A3.333 3.333 0 0 0 26.666 13Zm-9.333 6H16v1.333a.667.667 0 0 1-1.333 0V19h-1.333a.667.667 0 0 1 0-1.334h1.333v-1.333a.667.667 0 1 1 1.333 0v1.333h1.333a.667.667 0 1 1 0 1.334Zm7.333 2a2.667 2.667 0 1 1 0-5.333 2.667 2.667 0 0 1 0 5.333ZM26 18.333a1.333 1.333 0 1 1-2.667 0 1.333 1.333 0 0 1 2.667 0Z" />
+                          </g>
+                        </svg>
+
+                        <div>
+                          <p
+                            class="text-marine-blue font-sans font-medium text-base">
+                            Pro
+                          </p>
+                          <p class="text-gray-400 font-sans text-sm">$15/mo</p>
+                          <p class="text-marine-blue font-sans text-xs"></p>
+                        </div>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                class="bg-magnolia rounded-xl p-3 mt-8 flex items-center justify-center">
+                <label
+                  for="plan-toggle"
+                  class="inline-flex items-center space-x-4 cursor-pointer">
+                  <span class="text-gray-400 font-medium active-toggle"
+                    >Monthly</span
+                  >
+                  <span class="relative">
+                    <input
+                      id="plan-toggle"
+                      type="checkbox"
+                      class="hidden peer" />
+                    <div
+                      class="w-10 h-5 rounded-full shadow-inner bg-marine-blue"></div>
+                    <div
+                      class="absolute inset-y-0 left-0 w-3 h-3 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto bg-white"></div>
+                  </span>
+                  <span class="text-gray-400 font-medium">Yearly</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="flex justify-between mb-4">
+              <button
+                class="py-3 rounded-lg font-sans font-medium text-marine-blue/40"
+                aria-label="Aria Next Step">
+                Go Back
+              </button>
+              <button
+                class="px-5 py-3 bg-marine-blue hover:bg-marine-blue/80 transition duration-100 rounded-lg font-sans font-medium text-white"
+                aria-label="Aria Next Step">
+                Next Step
+              </button>
+            </div>
+          </div>
+
+          <div class="form-3 flex flex-col justify-between flex-1">
+            <div>
+              <h2 class="text-marine-blue text-3xl font-bold">Pick add-ons</h2>
+              <p class="text-base text-marine-blue/50 mt-2 font-normal">
+                Add-ons help enhance your gaming experience.
+              </p>
+
+              <div class="flex flex-col mt-8 gap-3">
+                <div
+                  class="border border-purplish-blue p-5 rounded-md flex items-center justify-between active-checkbox">
+                  <div class="flex items-center gap-5">
+                    <input
+                      type="checkbox"
+                      name="checkbox-addons"
+                      id="addons-online"
+                      class="w-4 h-4 accent-purplish-blue"
+                      checked />
+                    <label for="addons-online" class="flex flex-col">
+                      <p class="text-md text-marine-blue font-medium">
+                        Online Service
+                      </p>
+                      <p class="text-base text-marine-blue/50 font-normal">
+                        Access to multiplayer games
+                      </p>
+                    </label>
+                  </div>
+                  <p class="text-purplish-blue/60 font-medium">+$1/mo</p>
+                </div>
+                <div
+                  class="border border-purplish-blue p-5 rounded-md flex items-center justify-between active-checkbox">
+                  <div class="flex items-center gap-5">
+                    <input
+                      type="checkbox"
+                      name="checkbox-addons"
+                      id="addons-larger-storage"
+                      class="w-4 h-4 accent-purplish-blue"
+                      checked />
+                    <label for="addons-larger-storage" class="flex flex-col">
+                      <p class="text-md text-marine-blue font-medium">
+                        Larger storage
+                      </p>
+                      <p class="text-base text-marine-blue/50 font-normal">
+                        Extra 1TB of cloud save
+                      </p>
+                    </label>
+                  </div>
+                  <p class="text-purplish-blue/60 font-medium">+$2/mo</p>
+                </div>
+                <div
+                  class="border border-purplish-blue p-5 rounded-md flex items-center justify-between">
+                  <div class="flex items-center gap-5">
+                    <input
+                      type="checkbox"
+                      name="checkbox-addons"
+                      id="addons-larger-storage"
+                      class="w-4 h-4 accent-purplish-blue" />
+                    <label for="addons-larger-storage" class="flex flex-col">
+                      <p class="text-md text-marine-blue font-medium">
+                        Customizable Profile
+                      </p>
+                      <p class="text-base text-marine-blue/50 font-normal">
+                        Custom theme on your profile
+                      </p>
+                    </label>
+                  </div>
+                  <p class="text-purplish-blue/60 font-medium">+$2/mo</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex justify-between mb-4">
+              <button
+                class="py-3 rounded-lg font-sans font-medium text-marine-blue/40"
+                aria-label="Aria Next Step">
+                Go Back
+              </button>
+              <button
+                class="px-5 py-3 bg-marine-blue hover:bg-marine-blue/80 transition duration-100 rounded-lg font-sans font-medium text-white"
+                aria-label="Aria Next Step">
+                Next Step
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

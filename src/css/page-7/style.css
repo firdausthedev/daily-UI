@@ -1,0 +1,20 @@
+@config "../../css/page-7/tailwind.config.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .active-form {
+    background: hsl(206, 94%, 87%);
+    color: black !important;
+  }
+
+  .active-toggle {
+    color: hsl(213, 96%, 18%) !important;
+  }
+
+  .active-checkbox {
+    background: hsl(217, 100%, 97%);
+  }
+}
