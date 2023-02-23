@@ -20,15 +20,15 @@
   <body class="bg-magnolia font-sans">
     <main>
       <section
-        class="bg-white w-[950px] h-[650px] mx-auto my-[150px] rounded-lg flex p-4 shadow-md">
+        class="lg:bg-white lg:rounded-lg lg:shadow-md lg:w-[950px] h-auto lg:h-[650px] lg:mx-auto lg:my-[150px] lg:p-4 flex lg:flex-row flex-col pb-[200px] lg:pb-4">
         <div
-          class="form-nav w-[300px] bg-no-repeat bg-cover bg-[url('../../img/page-7/bg-sidebar-desktop.svg')] rounded-lg p-10 flex flex-col gap-6">
-          <div class="flex gap-4 justify-start items-center">
+          class="form-nav w-full h-[200px] lg:h-full lg:w-[300px] bg-no-repeat bg-cover bg-[url('../../img/page-7/bg-sidebar-mobile.svg')] lg:bg-[url('../../img/page-7/bg-sidebar-desktop.svg')] lg:rounded-lg p-10 flex lg:flex-col justify-center lg:justify-start gap-6">
+          <div class="flex gap-4 justify-start lg:items-center">
             <p
               class="text-md font-bold text-white flex items-center justify-center w-10 h-10 rounded-full border-white border-2 active-form">
               1
             </p>
-            <div>
+            <div class="hidden lg:block">
               <p class="text-base text-light-gray/80 uppercase font-light">
                 Step 1
               </p>
@@ -37,12 +37,12 @@
               </h2>
             </div>
           </div>
-          <div class="flex gap-4 justify-start items-center">
+          <div class="flex gap-4 justify-start lg:items-center">
             <p
               class="text-md font-bold text-white flex items-center justify-center w-10 h-10 rounded-full border-white border-2">
               2
             </p>
-            <div>
+            <div class="hidden lg:block">
               <p class="text-base text-light-gray/80 uppercase font-light">
                 Step 2
               </p>
@@ -51,12 +51,12 @@
               </h2>
             </div>
           </div>
-          <div class="flex gap-4 justify-start items-center">
+          <div class="flex gap-4 justify-start lg:items-center">
             <p
               class="text-md font-bold text-white flex items-center justify-center w-10 h-10 rounded-full border-white border-2">
               3
             </p>
-            <div>
+            <div class="hidden lg:block">
               <p class="text-base text-light-gray/80 uppercase font-light">
                 Step 3
               </p>
@@ -65,12 +65,12 @@
               </h2>
             </div>
           </div>
-          <div class="flex gap-4 justify-start items-center">
+          <div class="flex gap-4 justify-start lg:items-center">
             <p
               class="text-md font-bold text-white flex items-center justify-center w-10 h-10 rounded-full border-white border-2">
               4
             </p>
-            <div>
+            <div class="hidden lg:block">
               <p class="text-base text-light-gray/80 uppercase font-light">
                 Step 4
               </p>
@@ -80,10 +80,11 @@
             </div>
           </div>
         </div>
-        <form class="form-container flex flex-1 pt-14 px-20">
+        <form
+          class="form-container flex flex-1 py-10 px-5 lg:pt-14 lg:px-20 bg-white -mt-20 lg:-mt-0 mx-5 lg:mx-0 rounded-md lg:rounded-none shadow-md lg:shadow-none">
           <div class="form-1 flex flex-col justify-between flex-1">
             <div>
-              <h2 class="text-marine-blue text-3xl font-bold">Personal Info</h2>
+              <h1 class="text-marine-blue text-3xl font-bold">Personal Info</h1>
               <p class="text-base text-marine-blue/50 mt-2 font-normal">
                 Please provide your name, email address, and phone number.
               </p>
@@ -146,7 +147,8 @@
               </div>
             </div>
 
-            <div class="flex justify-end mb-4">
+            <div
+              class="flex justify-end lg:mb-4 fixed lg:static bottom-0 right-0 left-0 p-5 lg:p-0 bg-white lg:bg-none shadow lg:shadow-none">
               <button
                 class="py-3 px-5 bg-marine-blue hover:bg-marine-blue/80 transition duration-100 rounded-lg font-sans font-medium text-white"
                 aria-label="Aria Next Step">
@@ -165,7 +167,7 @@
               </p>
 
               <div class="flex flex-col mt-8">
-                <ul class="grid grid-cols-3 gap-x-3">
+                <ul class="grid lg:grid-cols-3 lg:gap-x-3 grid-cols-1 gap-y-3">
                   <li>
                     <input
                       type="radio"
@@ -177,8 +179,9 @@
 
                     <label
                       for="radio-arcade"
-                      class="border border-gray-300 p-4 rounded-xl h-[10rem] flex peer-checked:border-purplish-blue peer-checked:bg-magnolia">
-                      <div class="flex flex-col justify-between">
+                      class="border border-gray-300 p-4 rounded-xl lg:h-[10rem] flex peer-checked:border-purplish-blue peer-checked:bg-magnolia">
+                      <div
+                        class="flex lg:flex-col lg:justify-between gap-3 lg:gap-0">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="40"
@@ -215,8 +218,9 @@
 
                     <label
                       for="radio-advanced"
-                      class="border border-gray-300 p-4 rounded-xl h-[10rem] flex peer-checked:border-purplish-blue peer-checked:bg-magnolia">
-                      <div class="flex flex-col justify-between">
+                      class="border border-gray-300 p-4 rounded-xl lg:h-[10rem] flex peer-checked:border-purplish-blue peer-checked:bg-magnolia">
+                      <div
+                        class="flex lg:flex-col lg:justify-between gap-3 lg:gap-0">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="40"
@@ -253,8 +257,9 @@
 
                     <label
                       for="radio-pro"
-                      class="border border-gray-300 p-4 rounded-xl h-[10rem] flex peer-checked:border-purplish-blue peer-checked:bg-magnolia">
-                      <div class="flex flex-col justify-between">
+                      class="border border-gray-300 p-4 rounded-xl lg:h-[10rem] flex peer-checked:border-purplish-blue peer-checked:bg-magnolia">
+                      <div
+                        class="flex lg:flex-col lg:justify-between gap-3 lg:gap-0">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="40"
@@ -306,7 +311,8 @@
               </div>
             </div>
 
-            <div class="flex justify-between mb-4">
+            <div
+              class="flex justify-between lg:mb-4 fixed lg:static bottom-0 right-0 left-0 p-5 lg:p-0 bg-white lg:bg-none shadow lg:shadow-none">
               <button
                 class="py-3 rounded-lg font-sans font-medium text-marine-blue/40"
                 aria-label="Aria Next Step">
@@ -390,7 +396,8 @@
               </div>
             </div>
 
-            <div class="flex justify-between mb-4">
+            <div
+              class="flex justify-between lg:mb-4 fixed lg:static bottom-0 right-0 left-0 p-5 lg:p-0 bg-white lg:bg-none shadow lg:shadow-none">
               <button
                 class="py-3 rounded-lg font-sans font-medium text-marine-blue/40"
                 aria-label="Aria Next Step">
@@ -446,7 +453,8 @@
               </div>
             </div>
 
-            <div class="flex justify-between mb-4">
+            <div
+              class="flex justify-between lg:mb-4 fixed lg:static bottom-0 right-0 left-0 p-5 lg:p-0 bg-white lg:bg-none shadow lg:shadow-none">
               <button
                 class="py-3 rounded-lg font-sans font-medium text-marine-blue/40"
                 aria-label="Aria Next Step">
