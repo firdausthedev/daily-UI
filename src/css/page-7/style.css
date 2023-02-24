@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 @layer components {
-  .active-form {
+  .active-nav {
     background: hsl(206, 94%, 87%);
     color: black !important;
   }
