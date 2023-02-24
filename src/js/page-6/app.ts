@@ -14,7 +14,7 @@ const fetchQuote = async () => {
   const data = await fetch("https://api.adviceslip.com/advice", {
     method: "GET",
   });
-  let res: Slip = await data.json();
+  const res: Slip = await data.json();
   return res;
 };
 
@@ -24,7 +24,7 @@ const setQuote = () => {
       quote.textContent = `"${data.slip.advice}"`;
       quoteID.textContent = `ADVICE #${data.slip.id}`;
     })
-    .catch(err => {
+    .catch(() => {
       quote.textContent = "Oops.. Something went wrong";
     });
 };

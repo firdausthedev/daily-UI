@@ -1,15 +1,12 @@
 // Constants
 const FIELD_REQUIRED = "This field is required";
-const EMAIL_INVALID_FORMAT = "Email if not formatted correctly";
+const EMAIL_INVALID_FORMAT = "Email is not formatted correctly";
 const PLAN_YEARLY = "2 months free";
 
 // inputs
 const name_input = document.getElementById("name")! as HTMLInputElement;
 const email_input = document.getElementById("email")! as HTMLInputElement;
 const phone_input = document.getElementById("phone")! as HTMLInputElement;
-const form_4_submit = document.querySelector(
-  ".form-4 #submit",
-)! as HTMLInputElement;
 
 const price_toggle = document.getElementById(
   "plan-toggle",
@@ -19,6 +16,9 @@ const larger_cb = document.getElementById(
   "addons-larger-storage",
 )! as HTMLInputElement;
 const custom_cb = document.getElementById("addons-custom")! as HTMLInputElement;
+const form_4_submit = document.querySelector(
+  ".form-4 #submit",
+)! as HTMLInputElement;
 
 // helpers
 const name_helpers = document.querySelector(
@@ -126,7 +126,7 @@ const show_yearly_msg = (isShow: boolean) => {
 
     document.querySelector(".form-2 .plan-price-1")!.textContent = "$9/mo";
     document.querySelector(".form-2 .plan-price-2")!.textContent = "$12/mo";
-    document.querySelector(".form-2 .plan-price-3")!.textContent = "$150/mo";
+    document.querySelector(".form-2 .plan-price-3")!.textContent = "$15/mo";
 
     document.querySelector(".plan-monthly")!.classList.add("active-toggle");
   }
@@ -226,7 +226,7 @@ const show_total = () => {
   const plan_radio = document.querySelector(
     'input[name="price-plan"]:checked',
   )! as HTMLInputElement;
-  let price: number = 0;
+  let price = 0;
   if (price_toggle.checked) {
     if (online_cb.checked) {
       price += 10;
@@ -279,26 +279,26 @@ const show_total = () => {
 };
 
 //  Event listeners
-form_1_next.addEventListener("click", e => {
+form_1_next.addEventListener("click", () => {
   validate_form_1();
 });
 
-form_2_prev.addEventListener("click", e => {
+form_2_prev.addEventListener("click", () => {
   set_active_nav(1);
   show_form(2, 1);
 });
 
-form_2_next.addEventListener("click", e => {
+form_2_next.addEventListener("click", () => {
   set_active_nav(3);
   show_form(2, 3);
 });
 
-form_3_prev.addEventListener("click", e => {
+form_3_prev.addEventListener("click", () => {
   set_active_nav(2);
   show_form(3, 2);
 });
 
-form_3_next.addEventListener("click", e => {
+form_3_next.addEventListener("click", () => {
   set_active_nav(4);
   show_form(3, 4);
   show_plan();
@@ -306,12 +306,12 @@ form_3_next.addEventListener("click", e => {
   show_total();
 });
 
-form_4_prev.addEventListener("click", e => {
+form_4_prev.addEventListener("click", () => {
   set_active_nav(3);
   show_form(4, 3);
 });
 
-form_4_change.addEventListener("click", e => {
+form_4_change.addEventListener("click", () => {
   set_active_nav(2);
   show_form(4, 2);
 });
@@ -322,19 +322,19 @@ form_4_submit.addEventListener("click", e => {
   show_form(4, 5);
 });
 
-price_toggle.addEventListener("change", e => {
+price_toggle.addEventListener("change", () => {
   show_yearly_msg(price_toggle.checked);
   show_addon_price(price_toggle.checked);
 });
 
-online_cb.addEventListener("change", e => {
+online_cb.addEventListener("change", () => {
   show_active_checkbox(online_cb.checked, 1);
 });
 
-larger_cb.addEventListener("change", e => {
+larger_cb.addEventListener("change", () => {
   show_active_checkbox(larger_cb.checked, 2);
 });
 
-custom_cb.addEventListener("change", e => {
+custom_cb.addEventListener("change", () => {
   show_active_checkbox(custom_cb.checked, 3);
 });
