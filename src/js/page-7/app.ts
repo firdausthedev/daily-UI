@@ -7,6 +7,10 @@ const PLAN_YEARLY = "2 months free";
 const name_input = document.getElementById("name")! as HTMLInputElement;
 const email_input = document.getElementById("email")! as HTMLInputElement;
 const phone_input = document.getElementById("phone")! as HTMLInputElement;
+const form_4_submit = document.querySelector(
+  ".form-4 #submit",
+)! as HTMLInputElement;
+
 const price_toggle = document.getElementById(
   "plan-toggle",
 )! as HTMLInputElement;
@@ -42,6 +46,12 @@ const form_3_prev = document.querySelector(
 )! as HTMLButtonElement;
 const form_3_next = document.querySelector(
   ".form-3 button.next",
+)! as HTMLButtonElement;
+const form_4_prev = document.querySelector(
+  ".form-4 button.prev",
+)! as HTMLButtonElement;
+const form_4_change = document.querySelector(
+  ".form-4 button.change",
 )! as HTMLButtonElement;
 
 const show_form = (currentForm: number, nextForm: number) => {
@@ -104,11 +114,20 @@ const show_yearly_msg = (isShow: boolean) => {
     document.querySelectorAll(".yearly-msg")!.forEach(item => {
       item.textContent = PLAN_YEARLY;
     });
+    document.querySelector(".form-2 .plan-price-1")!.textContent = "$90/yr";
+    document.querySelector(".form-2 .plan-price-2")!.textContent = "$120/yr";
+    document.querySelector(".form-2 .plan-price-3")!.textContent = "$150/yr";
+
     document.querySelector(".plan-yearly")!.classList.add("active-toggle");
   } else {
     document.querySelectorAll(".yearly-msg")!.forEach(item => {
       item.textContent = "";
     });
+
+    document.querySelector(".form-2 .plan-price-1")!.textContent = "$9/mo";
+    document.querySelector(".form-2 .plan-price-2")!.textContent = "$12/mo";
+    document.querySelector(".form-2 .plan-price-3")!.textContent = "$150/mo";
+
     document.querySelector(".plan-monthly")!.classList.add("active-toggle");
   }
 };
@@ -136,6 +155,129 @@ const show_addon_price = (isYearlyPlan: boolean) => {
   }
 };
 
+// form-4 function
+const show_plan = () => {
+  const plan_radio = document.querySelector(
+    'input[name="price-plan"]:checked',
+  )! as HTMLInputElement;
+
+  if (plan_radio.value === "price-arcade") {
+    if (price_toggle.checked) {
+      document.querySelector(".form-4 .plan")!.textContent = "Arcade (Yearly)";
+      document.querySelector(".form-4 .plan-price")!.textContent = "$90/yr";
+    } else {
+      document.querySelector(".form-4 .plan")!.textContent = "Arcade (Monthly)";
+      document.querySelector(".form-4 .plan-price")!.textContent = "$9/mo";
+    }
+  } else if (plan_radio.value === "price-advanced") {
+    if (price_toggle.checked) {
+      document.querySelector(".form-4 .plan")!.textContent = "Advance (Yearly)";
+      document.querySelector(".form-4 .plan-price")!.textContent = "$120/yr";
+    } else {
+      document.querySelector(".form-4 .plan")!.textContent =
+        "Advance (Monthly)";
+      document.querySelector(".form-4 .plan-price")!.textContent = "$12/mo";
+    }
+  } else {
+    if (price_toggle.checked) {
+      document.querySelector(".form-4 .plan")!.textContent = "Pro (Yearly)";
+      document.querySelector(".form-4 .plan-price")!.textContent = "$150/yr";
+    } else {
+      document.querySelector(".form-4 .plan")!.textContent = "Pro (Monthly)";
+      document.querySelector(".form-4 .plan-price")!.textContent = "$15/mo";
+    }
+  }
+};
+
+const show_addon = () => {
+  if (online_cb.checked) {
+    document.querySelector(".form-4 .addon-1")!.classList.remove("hidden");
+    if (price_toggle.checked) {
+      document.querySelector(".form-4 .addon-1 .price")!.textContent = "$10/yr";
+    } else {
+      document.querySelector(".form-4 .addon-1 .price")!.textContent = "$1/mo";
+    }
+  } else {
+    document.querySelector(".form-4 .addon-1")!.classList.add("hidden");
+  }
+  if (larger_cb.checked) {
+    document.querySelector(".form-4 .addon-2")!.classList.remove("hidden");
+    if (price_toggle.checked) {
+      document.querySelector(".form-4 .addon-2 .price")!.textContent = "$20/yr";
+    } else {
+      document.querySelector(".form-4 .addon-2 .price")!.textContent = "$2/mo";
+    }
+  } else {
+    document.querySelector(".form-4 .addon-2")!.classList.add("hidden");
+  }
+  if (custom_cb.checked) {
+    document.querySelector(".form-4 .addon-3")!.classList.remove("hidden");
+    if (price_toggle.checked) {
+      document.querySelector(".form-4 .addon-3 .price")!.textContent = "$20/yr";
+    } else {
+      document.querySelector(".form-4 .addon-3 .price")!.textContent = "$2/mo";
+    }
+  } else {
+    document.querySelector(".form-4 .addon-3")!.classList.add("hidden");
+  }
+};
+
+const show_total = () => {
+  const plan_radio = document.querySelector(
+    'input[name="price-plan"]:checked',
+  )! as HTMLInputElement;
+  let price: number = 0;
+  if (price_toggle.checked) {
+    if (online_cb.checked) {
+      price += 10;
+    }
+    if (larger_cb.checked) {
+      price += 20;
+    }
+    if (custom_cb.checked) {
+      price += 20;
+    }
+    if (plan_radio.value === "price-arcade") {
+      price += 90;
+    }
+    if (plan_radio.value === "price-advanced") {
+      price += 120;
+    }
+    if (plan_radio.value === "price-pro") {
+      price += 150;
+    }
+
+    document.querySelector(".form-4 .total")!.textContent = "Total (per year)";
+    document.querySelector(
+      ".form-4 .total-price",
+    )!.textContent = `$${price}/yr`;
+  } else {
+    if (online_cb.checked) {
+      price += 1;
+    }
+    if (larger_cb.checked) {
+      price += 2;
+    }
+    if (custom_cb.checked) {
+      price += 2;
+    }
+    if (plan_radio.value === "price-arcade") {
+      price += 9;
+    }
+    if (plan_radio.value === "price-advanced") {
+      price += 12;
+    }
+    if (plan_radio.value === "price-pro") {
+      price += 15;
+    }
+
+    document.querySelector(".form-4 .total")!.textContent = "Total (per month)";
+    document.querySelector(
+      ".form-4 .total-price",
+    )!.textContent = `$${price}/mo`;
+  }
+};
+
 //  Event listeners
 form_1_next.addEventListener("click", e => {
   validate_form_1();
@@ -159,6 +301,25 @@ form_3_prev.addEventListener("click", e => {
 form_3_next.addEventListener("click", e => {
   set_active_nav(4);
   show_form(3, 4);
+  show_plan();
+  show_addon();
+  show_total();
+});
+
+form_4_prev.addEventListener("click", e => {
+  set_active_nav(3);
+  show_form(4, 3);
+});
+
+form_4_change.addEventListener("click", e => {
+  set_active_nav(2);
+  show_form(4, 2);
+});
+
+form_4_submit.addEventListener("click", e => {
+  e.preventDefault();
+  set_active_nav(4);
+  show_form(4, 5);
 });
 
 price_toggle.addEventListener("change", e => {

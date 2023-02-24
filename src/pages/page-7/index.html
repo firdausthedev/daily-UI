@@ -82,7 +82,7 @@
         </div>
         <form
           class="form-container flex flex-1 py-10 px-5 lg:pt-14 lg:px-20 bg-white -mt-20 lg:-mt-0 mx-5 lg:mx-0 rounded-md lg:rounded-none shadow-md lg:shadow-none">
-          <div class="form-1 flex flex-col justify-between flex-1 hidden">
+          <div class="form-1 flex flex-col justify-between flex-1">
             <div>
               <h1 class="text-marine-blue text-3xl font-bold">Personal Info</h1>
               <p class="text-base text-marine-blue/50 mt-2 font-normal">
@@ -202,7 +202,10 @@
                             class="text-marine-blue font-sans font-medium text-base">
                             Arcade
                           </p>
-                          <p class="text-gray-400 font-sans text-sm">$9/mo</p>
+                          <p
+                            class="text-gray-400 font-sans text-sm plan-price-1">
+                            $9/mo
+                          </p>
                           <p
                             class="yearly-msg text-marine-blue font-sans text-xs"></p>
                         </div>
@@ -242,7 +245,10 @@
                             class="text-marine-blue font-sans font-medium text-base">
                             Advanced
                           </p>
-                          <p class="text-gray-400 font-sans text-sm">$12/mo</p>
+                          <p
+                            class="text-gray-400 font-sans text-sm plan-price-2">
+                            $12/mo
+                          </p>
                           <p
                             class="yearly-msg text-marine-blue font-sans text-xs"></p>
                         </div>
@@ -282,7 +288,10 @@
                             class="text-marine-blue font-sans font-medium text-base">
                             Pro
                           </p>
-                          <p class="text-gray-400 font-sans text-sm">$15/mo</p>
+                          <p
+                            class="text-gray-400 font-sans text-sm plan-price-3">
+                            $15/mo
+                          </p>
                           <p
                             class="yearly-msg text-marine-blue font-sans text-xs"></p>
                         </div>
@@ -324,7 +333,7 @@
               <button
                 type="button"
                 class="prev py-3 rounded-lg font-sans font-medium text-marine-blue/40"
-                aria-label="Aria Next Step">
+                aria-label="Aria Go Back">
                 Go Back
               </button>
               <button
@@ -417,7 +426,7 @@
               <button
                 type="button"
                 class="prev py-3 rounded-lg font-sans font-medium text-marine-blue/40"
-                aria-label="Aria Next Step">
+                aria-label="Aria Go Back">
                 Go Back
               </button>
               <button
@@ -429,7 +438,7 @@
             </div>
           </div>
 
-          <div class="form-4 flex flex-col justify-between flex-1">
+          <div class="form-4 flex flex-col justify-between flex-1 hidden">
             <div>
               <h2 class="text-marine-blue text-3xl font-bold">Finishing up</h2>
               <p class="text-base text-marine-blue/50 mt-2 font-normal">
@@ -439,43 +448,59 @@
               <div class="flex flex-col mt-8 bg-magnolia rounded-md p-5">
                 <div class="flex items-center justify-between">
                   <div class="flex flex-col">
-                    <p class="font-medium text-marine-blue">Arcade (Yearly)</p>
-                    <a
-                      class="underline text-sm text-gray-500 cursor-pointer font-sans"
-                      >Change</a
-                    >
+                    <p class="font-medium text-marine-blue plan">
+                      Arcade (Yearly)
+                    </p>
+                    <button
+                      type="button"
+                      class="underline text-sm text-gray-500 cursor-pointer font-sans w-fit change">
+                      Change
+                    </button>
                   </div>
-                  <p class="font-bold text-marine-blue">$90/yr</p>
+                  <p class="font-bold text-marine-blue plan-price">$90/yr</p>
                 </div>
                 <hr class="h-px mt-8 mb-4 bg-gray-300 border-0" />
 
-                <div class="flex items-center justify-between">
-                  <div class="flex flex-col">
-                    <p class="text-base text-gray-400">Online service</p>
+                <div class="addon-list">
+                  <div class="flex items-center justify-between addon-1">
+                    <div class="flex flex-col">
+                      <p class="text-base text-gray-400">Online service</p>
+                    </div>
+                    <p class="font-medium text-marine-blue/70 price">$10/yr</p>
                   </div>
-                  <p class="font-medium text-marine-blue/70">$10/yr</p>
-                </div>
-                <div class="flex items-center justify-between mt-2">
-                  <div class="flex flex-col">
-                    <p class="text-base text-gray-400">Larger storage</p>
+                  <div class="flex items-center justify-between mt-2 addon-2">
+                    <div class="flex flex-col">
+                      <p class="text-base text-gray-400">Larger storage</p>
+                    </div>
+                    <p class="font-medium text-marine-blue/70 price">$20/yr</p>
                   </div>
-                  <p class="font-medium text-marine-blue/70">$20/yr</p>
+                  <div class="flex items-center justify-between mt-2 addon-3">
+                    <div class="flex flex-col">
+                      <p class="text-base text-gray-400">
+                        Customizable Profile
+                      </p>
+                    </div>
+                    <p class="font-medium text-marine-blue/70 price">$20/yr</p>
+                  </div>
                 </div>
               </div>
 
               <div class="flex items-center justify-between mt-2 p-4">
                 <div class="flex flex-col">
-                  <p class="text-base text-gray-400">Total (per year)</p>
+                  <p class="text-base text-gray-400 total">Total (per year)</p>
                 </div>
-                <p class="font-bold text-xl text-purplish-blue">$120/yr</p>
+                <p class="font-bold text-xl text-purplish-blue total-price">
+                  $120/yr
+                </p>
               </div>
             </div>
 
             <div
               class="flex justify-between lg:mb-4 fixed lg:static bottom-0 right-0 left-0 p-5 lg:p-0 bg-white lg:bg-none shadow lg:shadow-none">
               <button
-                class="py-3 rounded-lg font-sans font-medium text-marine-blue/40"
-                aria-label="Aria Next Step">
+                type="button"
+                class="prev py-3 rounded-lg font-sans font-medium text-marine-blue/40"
+                aria-label="Aria Go Back">
                 Go Back
               </button>
               <input
@@ -487,7 +512,7 @@
           </div>
 
           <div
-            class="form-4-completed flex flex-col flex-1 items-center justify-center gap-4 hidden">
+            class="form-5 flex flex-col flex-1 items-center justify-center gap-4 hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="80"
