@@ -42,3 +42,5 @@ diceBtn.addEventListener("click", () => {
     setQuote();
   }, 2000);
 });
+
+export {};

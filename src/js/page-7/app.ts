@@ -338,3 +338,5 @@ larger_cb.addEventListener("change", () => {
 custom_cb.addEventListener("change", () => {
   show_active_checkbox(custom_cb.checked, 3);
 });
+
+export {};

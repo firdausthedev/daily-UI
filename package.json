@@ -7,7 +7,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/pages/page-7/index.html",
+    "dev": "parcel src/pages/page-8/index.html",
     "build": "rm -rf dist && rm -rf .parcel-cache && parcel build src/pages/index.html --public-url ./ && parcel build src/pages/page-*/*.html --public-url ../",
     "deploy": "gh-pages -d dist"
   },

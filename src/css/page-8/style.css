@@ -1,0 +1,36 @@
+@config "../../css/page-8/tailwind.config.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .custom-opacity {
+    @apply hover:opacity-60 transition-opacity duration-150;
+  }
+  .container {
+    max-width: 1100px;
+  }
+
+  .custom-btn {
+    @apply bg-pink inline-block w-fit text-white text-sm md:text-base font-semibold py-4 rounded-full shadow-xl px-[3rem] md:px-[6rem] custom-opacity outline-very-dark-cyan border-none;
+  }
+
+  .curved-section {
+    @apply relative bg-[#F6FBFF];
+  }
+  .curved-section::after {
+    @apply absolute w-full h-[15vh] bg-[url(../../img/page-8/bg-section-top-mobile-1.svg)] md:bg-[url(../../img/page-8/bg-section-top-desktop-1.svg)] bg-white bg-no-repeat bg-cover -top-[50px] content-[""];
+  }
+  .curved-section::before {
+    @apply absolute w-full h-[15vh] bg-[url(../../img/page-8/bg-section-bottom-mobile-1.svg)] md:bg-[url(../../img/page-8/bg-section-bottom-desktop-1.svg)] bg-white bg-no-repeat bg-cover -bottom-[50px] content-[""];
+  }
+
+  h2 {
+    @apply font-bold text-xl md:text-[2.2rem] font-heading w-full;
+  }
+
+  footer::after {
+    @apply absolute w-full h-[158px] bg-[url(../../img/page-8/bg-footer-top-mobile.svg)]  md:bg-[url(../../img/page-8/bg-footer-top-desktop.svg)]  bg-no-repeat bg-contain md:bg-cover -top-[50px]  md:-top-[158px] content-[""];
+  }
+}
