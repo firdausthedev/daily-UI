@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap");
+
+@config "../../css/page-9/tailwind.config.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bg-img {
+    @apply absolute top-0 left-0 right-0 h-full bg-no-repeat bg-cover -z-10;
+  }
+
+  .bg-img-1 {
+    @apply bg-[url("../../img/page-9/desktop-image-hero-1.jpg")];
+  }
+}
