@@ -13,47 +13,88 @@
     <link rel="stylesheet" href="../../css/page-9/style.css" />
   </head>
   <body class="font-league">
-    <main class="grid grid-cols-2 h-[75vh]">
-      <div class="relative">
+    <main class="flex flex-col xl:flex-row flex-1 xl:h-[75vh] hero">
+      <div class="relative min-h-[23rem] flex flex-1">
         <div class="bg-img bg-img-1"></div>
-        <nav class="flex gap-20 pt-20 pl-20 items-center">
-          <img src="../../img/page-9/logo.svg" alt="logo" class="h-6" />
-          <ul class="flex gap-10 font-bold text-white">
-            <li><a href="#">home</a></li>
-            <li><a href="#">shop</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <div class="flex justify-center items-start flex-col px-24 relative">
-        <div class="buttons absolute bottom-0 left-0 flex">
+        <div class="bg-img bg-img-2 hidden"></div>
+        <div class="bg-img bg-img-3 hidden"></div>
+
+        <header
+          class="xl:gap-20 p-10 xl:pt-20 xl:pl-20 w-full h-fit flex items-center justify-center xl:items-start xl:justify-start relative">
+          <div class="hamburger xl:hidden"></div>
+          <img src="../../img/page-9/logo.svg" alt="logo" class="h-4 md:h-6" />
+          <nav class="hidden xl:flex">
+            <ul class="flex gap-5 xl:gap-10 font-bold text-white">
+              <li><a href="#">home</a></li>
+              <li><a href="#">shop</a></li>
+              <li><a href="#">about</a></li>
+              <li><a href="#">contact</a></li>
+            </ul>
+          </nav>
+        </header>
+
+        <div class="absolute bottom-0 -right-0 xl:-mr-[9.78rem] flex z-10">
           <button
-            class="left-btn p-8 hover:opacity-50 transition-opacity duration-200 bg-black"
+            class="left-btn p-4 xl:p-8 hover:opacity-50 transition-opacity duration-200 bg-black"
             type="button">
-            <img src="../../img/page-9/icon-angle-left.svg" alt="left arrow" />
+            <img
+              src="../../img/page-9/icon-angle-left.svg"
+              alt="left arrow"
+              class="h-4 lg:h-auto" />
           </button>
           <button
-            class="right-btn p-8 hover:opacity-50 transition-opacity duration-200 bg-black"
+            class="right-btn p-4 xl:p-8 hover:opacity-50 transition-opacity duration-200 bg-black"
             type="button">
             <img
               src="../../img/page-9/icon-angle-right.svg"
-              alt="right arrow" />
+              alt="right arrow"
+              class="h-4 lg:h-auto" />
           </button>
         </div>
+      </div>
+      <div
+        class="flex xl:justify-center items-start flex-col flex-1 px-8 py-12 xl:px-24 relative">
+        <div class="text-1">
+          <h1
+            class="font-bold text-[2.2rem] xl:text-[3rem] leading-none xl:leading-tight">
+            Discover innovative ways to decorate
+          </h1>
+          <p class="text-dark-gray text-sm xl:text-base mt-4">
+            We provide unmatched quality, comfort, and style for property owners
+            across the country. Our experts combine form and function in
+            bringing your vision to life. Create a room in your own style with
+            our collection and make your property a reflection of you and what
+            you love.
+          </p>
+        </div>
+        <div class="text-2 hidden">
+          <h2
+            class="font-bold text-[2.2rem] xl:text-[3rem] leading-none xl:leading-tight">
+            We are available all across the globe
+          </h2>
+          <p class="text-dark-gray text-sm xl:text-base mt-4">
+            With stores all over the world, it's easy for you to find furniture
+            for your home or place of business. Locally, we’re in most major
+            cities throughout the country. Find the branch nearest you using our
+            store locator. Any questions? Don't hesitate to contact us today.
+          </p>
+        </div>
+        <div class="text-3 hidden">
+          <h2
+            class="font-bold text-[2.2rem] xl:text-[3rem] leading-none xl:leading-tight">
+            Manufactured with the best materials
+          </h2>
+          <p class="text-dark-gray text-sm xl:text-base mt-4">
+            Our modern furniture store provide a high level of quality. Our
+            company has invested in advanced technology to ensure that every
+            product is made as perfect and as consistent as possible. With three
+            decades of experience in this industry, we understand what customers
+            want for their home and office.
+          </p>
+        </div>
 
-        <h1 class="text-1 font-bold text-[3rem] leading-tight">
-          Discover innovative ways to decorate
-        </h1>
-        <p class="text-1 text-dark-gray mt-4">
-          We provide unmatched quality, comfort, and style for property owners
-          across the country. Our experts combine form and function in bringing
-          your vision to life. Create a room in your own style with our
-          collection and make your property a reflection of you and what you
-          love.
-        </p>
         <button
-          class="relative uppercase mt-5 text-xl tracking-[0.6em] hover:opacity-40 transition-opacity duration-200"
+          class="relative uppercase mt-10 xl:mt-5 xl:text-xl tracking-[0.6em] hover:opacity-40 transition-opacity duration-200"
           type="button"
           aria-label="Shop Now">
           Shop Now
@@ -64,13 +105,15 @@
         </button>
       </div>
     </main>
-    <section class="flex h-[20rem]">
+    <section class="flex flex-col xl:flex-row">
       <div
-        class="bg-[url('../../img/page-9/image-about-dark.jpg')] bg-cover bg-center bg-no-repeat w-[40rem]"></div>
+        class="bg-[url('../../img/page-9/image-about-dark.jpg')] bg-cover bg-center bg-no-repeat w-full h-[20rem] xl:w-[40rem]"></div>
 
-      <div class="w-full flex flex-col justify-center px-24">
-        <h2 class="text-xl font-bold tracking-[0.6em]">ABOUT OUR FURNITURE</h2>
-        <p class="text-dark-gray mt-4">
+      <div class="w-full flex flex-col justify-center px-8 py-12 xl:px-24">
+        <h2 class="text-base font-bold tracking-[0.3em] xl:tracking-[0.6em]">
+          ABOUT OUR FURNITURE
+        </h2>
+        <p class="text-dark-gray text-sm xl:text-base mt-4">
           Our multifunctional collection blends design and function to suit your
           individual taste. Make each room unique, or pick a cohesive theme that
           best express your interests and what inspires you. Find the furniture
@@ -80,7 +123,9 @@
         </p>
       </div>
       <div
-        class="bg-[url('../../img/page-9/image-about-light.jpg')] bg-cover bg-center bg-no-repeat w-[40rem]"></div>
+        class="bg-[url('../../img/page-9/image-about-light.jpg')] bg-cover bg-center bg-no-repeat w-full h-[20rem] xl:w-[40rem]"></div>
     </section>
+
+    <script src="../../js/page-9/app.ts" type="module"></script>
   </body>
 </html>

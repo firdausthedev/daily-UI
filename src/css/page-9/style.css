@@ -8,10 +8,44 @@
 
 @layer components {
   .bg-img {
-    @apply absolute top-0 left-0 right-0 h-full bg-no-repeat bg-cover -z-10;
+    @apply absolute top-0 left-0 right-0 h-full bg-no-repeat bg-cover bg-bottom xl:bg-left -z-10;
   }
 
   .bg-img-1 {
-    @apply bg-[url("../../img/page-9/desktop-image-hero-1.jpg")];
+    @apply bg-[url("../../img/page-9/mobile-image-hero-1.jpg")] xl:bg-[url("../../img/page-9/desktop-image-hero-1.jpg")];
+  }
+  .bg-img-2 {
+    @apply bg-[url("../../img/page-9/mobile-image-hero-2.jpg")] xl:bg-[url("../../img/page-9/desktop-image-hero-2.jpg")];
+  }
+  .bg-img-3 {
+    @apply bg-[url("../../img/page-9/mobile-image-hero-3.jpg")] xl:bg-[url("../../img/page-9/desktop-image-hero-3.jpg")];
+  }
+
+  .hamburger {
+    @apply absolute h-[14px] w-[20px] bg-[url(../../img/page-9/icon-hamburger.svg)] bg-cover top-10 left-8 z-20 cursor-pointer;
+  }
+
+  .hamburger.open {
+    @apply h-[16px] w-[16px] bg-[url(../../img/page-9/icon-close.svg)];
+  }
+
+  header.open {
+    @apply bg-white text-black justify-end;
+  }
+
+  header.open nav {
+    @apply flex;
+  }
+
+  header.open img {
+    @apply hidden;
+  }
+
+  header.open nav ul {
+    @apply text-black;
+  }
+
+  .hero.open {
+    @apply bg-black/50;
   }
 }
